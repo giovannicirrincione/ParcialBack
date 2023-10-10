@@ -1,3 +1,11 @@
 http://localhost:8080/api/v1/persona/search?filtro=giova
 http://localhost:8080/api/v1/persona/search?filtro=beto
 http://localhost:8080/api/v1/persona/search?filtro=giova&page=0&size=2
+
+
+
+https://parcialback.onrender.com/api/v1/persona
+https://parcialback.onrender.com/api/v1/persona/search?filtro=giova
+https://parcialback.onrender.com/api/v1/persona/search?filtro=beto
+https://parcialback.onrender.com/api/v1/domicilio
+https://parcialback.onrender.com/api/v1/persona/libro
