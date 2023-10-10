@@ -32,6 +32,7 @@ public class DemoApplication {
 	CommandLineRunner init(PersonaRepository personaRepository, AutorRepository autorRepository, DomicilioRepository domicilioRepository, LibroRepository libroRepository, LocalidadRepository localidadRepository) {
 		return args -> {
 
+
 			for(int i = 0; i<=15; i++){
 				Localidad localidad  = Localidad.builder()
 						.denominacion("localicadPrueba")
@@ -65,6 +66,24 @@ public class DemoApplication {
 						.build();
 				autorRepository.save(autor);
 			}
+			Localidad localidad1  = Localidad.builder()
+					.denominacion("localicadPrueba")
+					.build();
+			localidadRepository.save(localidad1);
+			Domicilio domicilio1 = Domicilio.builder()
+					.calle("calleprueba")
+					.numero(31312)
+					.localidad(localidad1)
+					.build();
+			domicilioRepository.save(domicilio1);
+
+			Persona persona1 = Persona.builder()
+					.nombre("beto")
+					.apellido("db")
+					.domicilio(domicilio1)
+					.dni(342432)
+					.build();
+			personaRepository.save(persona1);
 
 		};
 	}
